@@ -1,0 +1,234 @@
+body {
+  max-width: 1360rem;
+  width: 100%;
+
+  padding: 0 4rem;
+}
+
+/* ヘッダー全体 */
+.header_area {
+  padding: 4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10rem;
+  background-color: white;
+
+  z-index: 100;
+}
+
+.header_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_logo {
+  display: block;
+  width: 15rem;
+  height: auto;
+}
+
+/* ハンバーガーボタン */
+.hamburger_menu {
+  position: relative;
+  width: 4rem;
+  height: 3rem;
+  cursor: pointer;
+  background-color: white;
+
+  z-index: 300;
+}
+
+/* バー（3本線） */
+.bar {
+  display: block;
+  transition: 0.3s;
+  left: 0;
+  height: 0.2rem;
+  width: 4rem;
+  background: black;
+  /* 💡 追加：回転の軸を中央にする */
+  transform-origin: center;
+
+  position: absolute;
+}
+.bar:nth-child(1) {
+  top: 1rem;
+}
+.bar:nth-child(2) {
+  top: 1.8rem;
+}
+
+.hamburger_menu.open {
+  background-color: transparent;
+}
+
+/* openクラスで × に変化 */
+.hamburger_menu.open .bar:nth-child(1) {
+  transform: rotate(45deg);
+  top: 1.4rem;
+  background: white;
+}
+.hamburger_menu.open .bar:nth-child(2) {
+  transform: rotate(-45deg);
+  top: 1.4rem;
+  background: white;
+}
+
+/* グローバルメニュー（デフォルト非表示） */
+.global_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  padding: 15rem 0 0 0;
+
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none; /* デフォルト非表示 */
+
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  z-index: 150;
+}
+
+.global_menu.open {
+  display: flex; /* openクラスが付いたら表示 */
+}
+
+.global_menu_link {
+  color: white;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+/* ┌─────────────────────────────────────────┐
+   │ メイン・商品一覧                        │
+   └─────────────────────────────────────────┘ */
+
+.products_area {
+  padding-top: 15rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.product_img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.wrapper {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ┌─────────────────────────────────────────┐
+   │ フッター                        │
+   └─────────────────────────────────────────┘ */
+.footer_area {
+  margin-top: 5rem;
+  color: black;
+  height: 10rem;
+}
+
+.footer_view_more {
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+}
+
+.last_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sns_content {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer_page {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer_page_number {
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+}
+
+/* ┌─────────────────────────────────────────┐
+   │ メイン・商品                        │
+   └─────────────────────────────────────────┘ */
+
+.detail_area {
+  max-width: 60rem;
+  padding-top: 15rem;
+
+  display: flex;
+  gap: 4rem;
+}
+
+.detail_text {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail_wrapper {
+  width: 50%;
+}
+
+.detail_wrapper_right {
+  max-width: 60rem;
+}
+
+.company_area {
+  max-width: 60rem;
+  padding-top: 15rem;
+}
+
+.company_area {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.company_wrapper {
+  width: 100%;
+  height: 4rem;
+  font-size: 1.6rem;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.company_wrapper:not(:last-child) {
+  border-bottom: 0.1rem solid grey;
+}
+
+.company_work {
+  height: 7rem;
+}
+
+.item {
+  width: 40%;
+}
+.discripsion {
+  width: 60%;
+}
