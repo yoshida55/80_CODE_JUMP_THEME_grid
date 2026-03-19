@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Diary</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/work.css" />
+  </head>
+  <body>
+    <!-- ===============================================
+      ヘッダーエリア
+      =============================================== -->
+    <header class="header_area">
+      <!-- ハンバーガーメニューをヘッダーをflexboxで横並びにする -->
+      <div class="header_content">
+        <h1>
+          <a href="#">
+            <img class="header_logo" src="img/logo.svg" alt="ロゴ" />
+          </a>
+        </h1>
+        <!-- ハンバーガーメニュー  -->
+        <button class="hamburger_menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+
+      <!-- グローバルメニュー -->
+      <nav class="global_menu">
+        <a href="#" class="global_menu_link">トップ</a>
+        <a href="#" class="global_menu_link">会社概要</a>
+        <a href="#" class="global_menu_link">採用情報</a>
+        <a href="#" class="global_menu_link">お問い合わせ</a>
+      </nav>
+    </header>
+
+    <!-- ===============================================
+     メイン・商品
+     =============================================== -->
+    <main>
+      <section class="company_area">
+        <!-- 商品と説明を左右にわけるflex -->
+        <div class="company_wrapper">
+          <dt class="item">社名</dt>
+          <dd class="discripsion">株式会社サンプル</dd>
+        </div>
+
+        <div class="company_wrapper">
+          <dt class="item">住所</dt>
+          <dd class="discripsion">東京都</dd>
+        </div>
+        <div class="company_wrapper">
+          <dt class="item">設立</dt>
+          <dd class="discripsion">2025年3月5日</dd>
+        </div>
+        <div class="company_wrapper">
+          <dt class="item">資本金</dt>
+          <dd class="discripsion">1000万円</dd>
+        </div>
+        <div class="company_wrapper">
+          <dt class="item">従業員</dt>
+          <dd class="discripsion">100人</dd>
+        </div>
+        <div class="company_wrapper company_work">
+          <dt class="item">事業内容</dt>
+          <dd class="discripsion">ソフトウェア開発<br />ITコンサルティング<br />システム運用・保守</dd>
+        </div>
+
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3132.8687329471873!2d140.88474307646607!3d38.2593503840983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8a2963626ea69b%3A0x13eccfeff0d68b0e!2z5bCx5Yq057aZ57aa5pSv5o-0QeWeiyDjg6rjg7Pjgq_jg6_jg7zjgq_jgrnku5nlj7Dpp4XmnbHlj6M!5e0!3m2!1sja!2sjp!4v1773809400940!5m2!1sja!2sjp" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer_area">
+      <!-- flex で横並びにする (SNSアイコンとコピーライトを横並びにする) -->
+      <div class="last_footer">
+        <div class="sns_content">
+          <p class="sns_icon">インスタ</p>
+          <p class="sns_icon">ツイッター</p>
+          <p class="sns_icon">フェイスブック</p>
+        </div>
+        <p class="copyright">Copyright © 2024 Recipe Diary All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- ===============================================
+    フッター
+     =============================================== -->
+    <script src="js/work.js"></script>
+  </body>
+</html>

@@ -16,10 +16,13 @@
         <!-- ハンバーガーメニューをヘッダーをflexboxで横並びにする -->
         <div class="header_content">
             <h1>
-                <a href="#">
-                    <img class="header_logo" src="img/logo.svg" alt="ロゴ" />
+                <a href="<?php echo home_url(); ?>">
+                    <img class="header_logo" src="<?php echo get_theme_file_uri('img/logo.svg'); ?>" alt="ロゴ" />
                 </a>
             </h1>
+
+            <?php echo get_theme_file_uri('img/item1.jpg'); ?>
+
             <!-- ハンバーガーメニュー  -->
             <button class="hamburger_menu">
                 <span class="bar"></span>
@@ -29,9 +32,9 @@
 
         <!-- グローバルメニュー -->
         <nav class="global_menu">
-            <a href="#" class="global_menu_link">トップ</a>
-            <a href="#" class="global_menu_link">会社概要</a>
-            <a href="#" class="global_menu_link">採用情報</a>
-            <a href="#" class="global_menu_link">お問い合わせ</a>
+            <a href="<?php echo home_url(); ?>" class="global_menu_link">トップ</a>
+            <a href="<?php echo home_url('/about'); ?>" class="global_menu_link">会社概要</a>
+            <a href="<?php echo home_url('/careers'); ?>" class="global_menu_link">採用情報</a>
+            <a href="<?php echo home_url('/contact'); ?>" class="global_menu_link">お問い合わせ</a>
         </nav>
     </header>
