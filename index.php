@@ -10,7 +10,7 @@
           <a href="<?php the_permalink(); ?>">
             <?php the_post_thumbnail('large', ['class' => 'product_img']); ?>
           </a>
-          <div class="product_description">
+          <div class="product-description">
             <h2 class="product_name"><?php the_title(); ?></h2>
             <p class="product_price"><?php echo get_post_meta(get_the_ID(), 'price', true); ?>円</p>
           </div>

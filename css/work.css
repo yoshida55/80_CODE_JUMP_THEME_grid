@@ -156,7 +156,12 @@ body {
 .sns_content {
   display: flex;
   gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
+.sns_icon {}
 
 .footer_page {
   display: flex;
@@ -229,6 +234,6 @@ body {
 .item {
   width: 40%;
 }
-.discripsion {
+.description {
   width: 60%;
 }

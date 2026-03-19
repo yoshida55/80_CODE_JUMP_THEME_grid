@@ -10,6 +10,6 @@ function fd_script()
 
 
     // work.jsを読み込む
-    wp_enqueue_script('work-js', get_template_directory_uri() . '/js/work.js', array(), null, true);
+    wp_enqueue_script('work-js', get_template_directory_uri() . '/js/work.js', array(), filemtime(get_template_directory() . '/js/work.js'), true);
 };
 add_action('wp_enqueue_scripts', 'fd_script');
