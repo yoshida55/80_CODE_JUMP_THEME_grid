@@ -1,13 +1,12 @@
     <footer class="footer_area">
-        <a href="/view_more.html" class="footer_view_more">View More</a>
         <!-- flex で横並びにする (SNSアイコンとコピーライトを横並びにする) -->
         <nav class="last_footer">
             <ul class="sns_content">
-                <li class="sns_icon">インスタ</li>
-                <li class="sns_icon">ツイッター</li>
-                <li class="sns_icon">フェイスブック</li>
+                <li><a href="https://www.instagram.com/" target="_blank" class="sns_icon">インスタグラム</a></li>
+                <li><a href="https://twitter.com/" target="_blank" class="sns_icon">ツイッター</a></li>
+                <li><a href="https://www.facebook.com/" target="_blank" class="sns_icon">フェイスブック</a></li>
             </ul>
-            <p class="copyright">Copyright © 2024 Recipe Diary All rights reserved.</p>
+            <p class="copyright">&copy; <?php bloginfo('name'); ?></p>
         </nav>
     </footer>
     <!-- ===============================================
