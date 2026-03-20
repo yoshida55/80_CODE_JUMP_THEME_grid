@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Skill(update-config)",
-      "Skill(update-config:*)"
+      "Skill(update-config:*)",
+      "Bash(curl -s -X POST http://127.0.0.1:3848/highlight-line -H \"Content-Type: application/json\" --data-binary \"{\"\"filePath\"\": \"\"D:/50_knowledge/01_memo.md\"\", \"\"lineNumber\"\": 16811}\")"
     ],
     "additionalDirectories": [
       "C:\\Users\\sensh\\.claude"

@@ -4,7 +4,7 @@
   <section class="products_area">
 
     <?php if (have_posts()) : ?>
-      <?php while (have_posts()) :?> 
+      <?php while (have_posts()) : ?>
         <?php the_post(); ?>
 
         <div class="product_content">
