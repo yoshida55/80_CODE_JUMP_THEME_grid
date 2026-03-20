@@ -1,19 +1,28 @@
 <?php get_header(); ?>
 
 <main class="main_area">
-  <!-- 商品と説明を左右にわけるflex -->
-  <section class="detail_area">
-    <div class="detail_wrapper">
-      <a href="about.html"><img src="img/item1.jpg" alt="" /></a>
-    </div>
-    <div class="detail_wrapper">
-      <p class="detail_text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-      <p class="detail_text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-      <p class="detail_text">商品名</p>
-      <p class="detail_text">¥1,000</p>
-      <p class="detail_text">商品の説明が入ります。商品の説明が入ります。商品の説明が入ります。商品の説明が入ります。商品の説明が入ります。</p>
-    </div>
-  </section>
+  <?php if (have_posts()) : ?>
+    <?php while (have_posts()) : the_post(); ?>
+      <!-- 商品と説明を左右にわけるflex -->
+      <section class="detail_area">
+        <div class="detail_wrapper">
+
+          <!-- サムネイルを表示 -->
+          <a href="<?php the_permalink(); ?>">
+            <?php the_post_thumbnail(); ?>
+          </a>
+
+        </div>
+        <div class="detail_wrapper">
+          <h3 class="detail_text"><?php the_title(); ?></h3>
+          <?php the_content(); ?>
+          <p class="detail_text">¥<?php echo esc_html(get_post_meta(get_the_ID(), 'price', true)); ?></p>
+        </div>
+      </section>
+    <?php endwhile; ?>
+  <?php endif; ?>
+
 </main>
+
 
 <?php get_footer(); ?>
