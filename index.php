@@ -3,23 +3,36 @@
 <main>
   <section class="products_area">
 
-    <?php if (have_posts()) : ?>
-      <?php while (have_posts()) : ?>
-        <?php the_post(); ?>
+    <!-- flexwrapで商品をならべる -->
+    <ul class="product_content">
+      <!-- 商品画像とタイトル、価格を表示  -->
+      <?php
+      $args = array('posts_per_page' => 8);
+      ?>
 
-        <div class="product_content">
+      <?php $posts = get_posts($args); ?>
+      <?php foreach ($posts as $post): ?>
+        <?php setup_postdata($post); ?>
+        <li class="product_item">
           <a href="<?php the_permalink(); ?>">
-            <?php the_post_thumbnail('large', ['class' => 'product_img']); ?>
+          <img class= "product_image" src="<?php the_post_thumbnail_url('full'); ?>" alt="">
+            <p class="product_title"><?php the_title() ?></p>
+            <p class="product_price">¥<?php echo esc_html(get_post_meta($post->ID, 'price', true)) ?>+tax</p>
           </a>
-          <div class="product-description">
-            <h2 class="product_name"><?php the_title(); ?></h2>
-            <p class="product_price"><?php echo esc_html(get_post_meta(get_the_ID(), 'price', true)); ?>円</p>
-          </div>
-        </div>
+        </li>
+      <?php endforeach; ?>
 
-      <?php endwhile; ?>
-    <?php endif; ?>
+      <?php wp_reset_postdata(); ?>
 
+
+
+
+
+
+    </ul>
+      <a class="view_more" 
+      href="<?php echo esc_url(home_url('/category/products/'));?>"> VIEW MORE 
+      </a>
   </section>
 </main>
 
