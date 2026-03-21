@@ -15,7 +15,7 @@
         <?php setup_postdata($post); ?>
         <li class="product_item">
           <a href="<?php the_permalink(); ?>">
-          <img class= "product_image" src="<?php the_post_thumbnail_url('full'); ?>" alt="">
+            <img class="product_image" src="<?php the_post_thumbnail_url('full'); ?>" alt="">
             <p class="product_title"><?php the_title() ?></p>
             <p class="product_price">¥<?php echo esc_html(get_post_meta($post->ID, 'price', true)) ?>+tax</p>
           </a>
@@ -30,9 +30,9 @@
 
 
     </ul>
-      <a class="view_more" 
-      href="<?php echo esc_url(home_url('/category/products/'));?>"> VIEW MORE 
-      </a>
+    <!-- <a class="view_more" 
+      href="<?php echo esc_url(home_url('/category/products/')); ?>"> VIEW MORE 
+      </a> -->
   </section>
 </main>
 

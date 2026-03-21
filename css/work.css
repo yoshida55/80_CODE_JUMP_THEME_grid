@@ -111,13 +111,6 @@ body {
    │ メイン・商品一覧                        │
    └─────────────────────────────────────────┘ */
 
-.products_area {
-  padding-top: 15rem;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-}
-
 .product_img {
   width: 100%;
   height: auto;
@@ -161,7 +154,8 @@ body {
   margin: 0;
 }
 
-.sns_icon {}
+.sns_icon {
+}
 
 .footer_page {
   display: flex;

@@ -1,0 +1,17 @@
+.products_area {
+  width: 100%;
+  padding-top: 10rem;
+}
+
+.product_content {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 2rem;
+}
+
+.product_item {
+  width: calc((100% - 2rem * 3) / 4);
+}
